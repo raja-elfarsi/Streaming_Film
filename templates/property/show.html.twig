@@ -1,0 +1,55 @@
+{% extends "Admin/base.html.twig"  %}
+{% block title property.titel %}
+{% block body %}
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+<div class="jumbotron text-center" style="background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);width: 100%;background-size: cover;height: 300px;">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8">
+
+        </div>
+        <div class="col-md-4">
+            <h1>{{property.titel}}<h1>
+            <h2>{{property.subtitel}}</h2>
+                <div class="text-primary" style="font-size:4rem; font-wight:bold;">{{property.price}} €</div>
+                <a href="#" class="btn btn-primary">Contactez Administrateur</a>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-4">
+
+    <p>
+    {{property.description | nl2br}}
+    </p>
+
+    <div class="row">
+        <div class="cold-md-8">
+        <h2>Caractéristiques</h2>
+            <table class="table table-responsive table-striped">
+                <tr>
+                
+                <th scope="row">Cinema</th>
+                <td>{{property.nomCinema}}</td>
+                </tr>
+
+                <tr>
+                
+                <th scope="row">Adresse</th>
+                <td>{{property.adress}} <br/> {{property.postalCode}} <br/> {{property.city}}  </td>
+                </tr>
+
+                <tr>
+                
+                <th scope="row">categorie</th>
+                <td>{{property.Category}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="cold-md-4">
+        <h2>Spécifités</h2>
+        </div>
+    </div>
+</div>
+</main>
+{% endblock %}

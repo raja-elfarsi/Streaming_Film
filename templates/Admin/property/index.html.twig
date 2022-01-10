@@ -1,0 +1,33 @@
+{% extends "Admin/base.html.twig"  %}
+{% block title 'Gerer les films' %}
+
+{% block body %}
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+<div class='container mt-4'>
+   <h1>Gestion des Films</h1>
+   <table class="table Table-striped">
+    <thead>
+    <tr>
+            <th>Titre</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+     {% for property in properties %}
+        <tr>
+            <td>{{property.title}}</td>
+            <td>
+                <a href="{{path('admin.property.edit',{id:property.id)}}" class="btn-secondary">Editer</a>
+            </td>
+        </tr>
+    {%endfor%}  
+    </tbody>
+   </table>
+  
+    </div>
+    
+   
+
+</main>
+{% endblock %}

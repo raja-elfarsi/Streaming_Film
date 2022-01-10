@@ -1,0 +1,11 @@
+{% extends "Admin/base.html.twig" %}
+{% block body %}
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <h1>Edit Stream</h1>
+
+    {{ include('stream/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('stream_index') }}">back to list</a>
+
+    {{ include('stream/_delete_form.html.twig') }}
+{% endblock %}
